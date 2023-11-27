@@ -6,7 +6,7 @@ const Button = ({text,onClick, disabled}) => {
   return (
     <div className="container-btn">
         <button 
-        className='btn' 
+        className='button' 
         onClick={onClick}
         disabled={disabled}>
         {text}
