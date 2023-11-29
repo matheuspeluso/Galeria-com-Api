@@ -38,6 +38,11 @@ describe('<Posts/>', () => {
       expect(screen.getByRole('img', { name: /title3/i })).toHaveAttribute('src', 'img/img3.png');
     });
 
+    it("should not render posts",()=>{
+        render(<Posts/>)
+        expect(screen.queryAllByRole('heading', { name: /title/i })).toHaveLength(0n);
+    })
+
     it('sbould match snapshot', () => {
       const {container} = render(<Posts {...props} />);
 
